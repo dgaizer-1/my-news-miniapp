@@ -355,7 +355,7 @@ def _svo_keep(text: str) -> bool:
 
     # достаточно 2 из 3 групп, либо core + (actions|places)
     score = sum([has_core, has_actions, has_places])
-    return score >= 2 and (has_core or has_actions)
+    return score >= 1 and (has_core or has_actions)
 
 
 async def get_svo(limit: int = 10) -> List[Dict[str, Any]]:
